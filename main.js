@@ -1,10 +1,11 @@
 console.log('Hello World!');
-fetch('./api.json')
+fetch('https://api.publicapis.org/entries')
     .then((response) => response.json())
     .then((json) => {
-        console.log(json)
+        let a = json.entries
+        console.log(a)
         let data = "";
-        json.map((values) => {
+        a.map((values) => {
             data += `<tr>
                           <td></td>
                           <td>${values.API}</td>
